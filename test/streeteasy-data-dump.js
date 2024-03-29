@@ -56,6 +56,9 @@ const Run = async () =>
     let argDir = argv.hasOwnProperty("dir") ? argv.dir : null;
     argDir = argDir ? argDir : null;
 
+    let argOutput = argv.hasOwnProperty("output") ? argv.output : null;
+    argOutput = argOutput ? argOutput : null;
+
     if (argDir === null)
     {
         console.log("Syntax: node streeteasy-data-dump.js --dir=<directory>");
@@ -80,7 +83,7 @@ const Run = async () =>
 
     await ProcessFolder(argDir);
 
-    await wb.xlsx.writeFile("output.xlsx");
+    await wb.xlsx.writeFile(argOutput);
 };
 
 Run();
