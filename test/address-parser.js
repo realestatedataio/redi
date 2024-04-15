@@ -61,7 +61,7 @@ const Run = async () =>
 
     if (argDir === null)
     {
-        console.log("Syntax: node streeteasy-data-dump.js --dir=<directory>");
+        console.log("Syntax: node address-parser --dir=<directory>");
         return;
     }
 
